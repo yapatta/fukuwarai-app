@@ -1,0 +1,13 @@
+{
+	"init": {
+        "driver": "mysql",
+        "user": "####",
+        "password": "#####"
+    },
+	"dev": {
+		"driver": "mysql",
+		"user": "####",
+    	"password": "#####",
+	    "database": "twitter_fukuwarai"
+	}
+}

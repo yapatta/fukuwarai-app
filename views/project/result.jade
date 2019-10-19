@@ -1,0 +1,21 @@
+extends ../layout
+block content
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1 福笑いが作成されました!
+    div.message-wrapper
+      p.message-content
+        | 是非Twitterで共有しましょう！
+        br
+        | あなたも福笑いの一部を書くことができます！
+    div.double-btn
+      a.btn.fukuwarai-btn.mr-10(href='/project/#{project_id}/part')
+        span.far.fa-edit
+        | 一部を描く
+      a.btn.share-btn
+        span.fas.fa-share
+        | 福笑いを共有

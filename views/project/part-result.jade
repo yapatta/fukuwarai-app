@@ -1,0 +1,25 @@
+extends ../layout
+block content
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1.main-title パーツが作成されました！
+    div.main-content-wrapper
+      div.part-wrapper
+        div.canvas-wrapper
+          img(src=picturePath)
+      div.part-wrapper
+        div.guideline-content.part-result
+          p.message-part-result-content
+            | パーツが作成されました！
+            br
+            | 確認してください！
+            br
+            | もしよかったら、自分が目を描いたことを共有しましょう！
+        div.btn-wrapper
+          a.btn.share-btn.mt-30
+            span.fas.fa-share.part-result.mr-10
+            | 福笑いを共有

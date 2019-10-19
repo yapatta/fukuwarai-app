@@ -1,0 +1,26 @@
+{
+  "name": "hongeeksy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "db-migrate": "^0.11.6",
+    "db-migrate-mysql": "^1.1.10",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "http": "0.0.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jimp": "^0.6.4",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
+    "oauth": "^0.9.15",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4",
+    "twitter": "^1.7.1"
+  }
+}

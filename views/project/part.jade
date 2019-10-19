@@ -1,0 +1,39 @@
+extends ../layout
+block content
+  script(src="/public/javascripts/canvas.js")
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1.main-title 福笑いパーツ作成
+    div.main-content-wrapper
+      div.part-wrapper
+        div.canvas-wrapper
+          canvas(id="canvas", width="280", height="280", style='background-image: url(#{picturePath});')
+        div.triple-btn.canvas-triple-btn
+          span.btn.fas.fa-circle.small(onclick='canvas_small()')
+          span.btn.fas.fa-circle.big(onclick='canvas_big()')
+          span.btn.fas.fa-eraser(onclick='canvas_eraser()')
+          //- a.btn.circle-btn-eraser(onclick='canvas_eraser()')
+        div.select-part-wrapper
+          span 部位を選択
+          span.select-part-exa
+            select(name="select-part", id='select-part')
+              option(value="eye") 目
+              option(value="eye") 鼻
+              option(value="eye") 口
+              option(value="eye") 耳
+        div.double-btn.canvas-double-btn
+          a.btn.fukuwarai-btn.mr-10(onclick='saveCanvas("/project/#{project_id}"/part)') 決定
+          a.btn.reset-btn(onclick="clearCanvas()") リセット
+      div.part-wrapper
+        div.guideline-title ガイドライン
+        div.guideline-content
+          p.message-content 
+            |あなたが描きたい顔の部位を選んで、黒いキャンバスに描くことができます。
+            br
+            |決定ボタンを押すと、パーツ作成が完了します。
+            br
+            |リセットボタンを押すと、描いた絵が消去されます。

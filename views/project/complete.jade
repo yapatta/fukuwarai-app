@@ -1,0 +1,31 @@
+extends ../layout
+block content
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1.main-title 福笑いパーツ作成
+    div.main-content-wrapper
+      div.part-wrapper
+        div.canvas-wrapper
+          img(src=path, class="complete-picture")
+      div.part-wrapper
+        div.guideline-title
+          | こんな絵になりました！
+          br
+          | もしよかったら、Twitterで共有しましょう！
+        div.guideline-content
+          p.message-complete-content
+            | 目  written by
+            br
+            | 鼻  written by
+            br
+            | 口  written by
+            br
+            | 耳  written by
+        div.btn-wrapper
+          a.btn.fukuwarai-btn
+            span.fab.fa-twitter.mr-10
+            | 福笑いをTwitterで共有

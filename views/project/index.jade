@@ -1,0 +1,41 @@
+extends ../layout
+block content
+  script(src="/public/javascripts/canvas.js")
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1
+        span.far.fa-edit.icon-right
+        | 福笑いを作成する
+    div.message-wrapper
+      div.make-subtitle
+        h2
+          i.fas.fa-info.icon-right
+          | 基本データ
+          span.subtitle-optional-message.icon-left
+            i.fas.fa-asterisk
+            | は必須
+      div.write-data
+        div
+          div.form-group.form-group-name
+            span.form-label.icon-right 名前:
+            span.form-name yapatta 
+          div.form-group.form-group-title
+            div.form-label 福笑いタイトル*
+            input#type(type="text", class="form" name="type" value="", placeholder="福笑いタイトル")
+          div.form-group.form-group-explanation
+           div.form-label 説明文*
+           textarea#explanation(class="form", name="explanation" value="", placeholder="説明文", cols="" ,rows="5")
+          div.canvas-wrapper.project-canvas-wrapper
+            p 背景や輪郭を描こう！
+            canvas(id="canvas", width="280", height="280")
+          div.triple-btn.canvas-triple-btn
+            span.btn.fas.fa-circle.small(onclick='canvas_small()')
+            span.btn.fas.fa-circle.big(onclick='canvas_big()')
+            span.btn.fas.fa-eraser(onclick='canvas_eraser()')
+          div.double-btn
+            button(type="submit", value="お題を作成", class="btn fukuwarai-btn mr-10" onclick="saveBase()") お題を作成
+            a.btn.reset-btn(onclick="clearCanvas()") リセット

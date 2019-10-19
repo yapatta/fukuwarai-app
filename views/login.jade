@@ -1,0 +1,19 @@
+extends layout
+block content
+  div.header-menu
+    a(href='/')
+      div.header-left Twitter福笑い
+
+  div.container
+    div.top-wrapper
+      h1 ログイン
+    div.login-message
+      div.alert.need-login
+        p 福笑いを作るにはログインが必要です
+      div.alert.login-explanation
+        p Twitter福笑いでは、Twitterのアプリ連携システムを利用することで、安全に簡単にログインをすることが出来ます。
+        p 下のボタンよりTwitterにて「連携アプリの認証」を行うと、ログインが完了します。
+      div.login-button
+       a(href="/auth/twitter", class="btn fukuwarai-btn")
+         span.fab.fa-twitter.icon-right
+         | Twitterでログインする
